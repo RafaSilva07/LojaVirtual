@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIXTO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+<header class="cabecalho" id="inicio">
+    <div class="logo">
+        <h1>Rixto Sports</h1>
+    </div>
+    <nav class="menu-navegacao">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#novidades">Novidades</a></li>
+            <li><a href="#destaques">Destaques</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="pesquisa">
+        <input type="text" placeholder="Buscar produtos...">
+        <button onclick="buscarProduto()">Buscar</button>
+    </div>
+    <div class="icones">
+        <!-- Ícone de usuário para entrar -->
+        <a href="#"><i class="fas fa-user"></i></a>
+        <!-- Ícone de carrinho com funcionalidade de abrir carrinho -->
+        <a href="#" onclick="toggleCarrinho()"><i class="fas fa-shopping-cart"></i></a>
+        <!-- Carrinho suspenso -->
+        <div id="carrinho" class="carrinho-suspenso">
+            <h3>Seu Carrinho</h3>
+            <div id="itens-carrinho"></div>
+            <p id="total">Total: R$ 0,00</p>
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+</header>
+
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <img src="img/banner1 (1).png" alt="Banner Esportivo">
+    </section>
+
+    <section class="produtos" id="novidades">
+        <h2>Lançamentos</h2>
+        <div class="lista-produtos">
+            <div class="produto-item">
+                <img src="img/chuteira 1.webp" alt="chuteira">
+                <h3>Chuteira</h3>
+                <p>R$ 199,99</p>
+                <button onclick="adicionarAoCarrinho('chuteira', 199.99)">Comprar</button>
+            </div>
+            <div class="produto-item">
+                <img src="img/raquete.webp" alt="Raquete">
+                <h3>Raquete</h3>
+                <p>R$ 139,99</p>
+                <button onclick="adicionarAoCarrinho('Raquete', 139.99)">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section class="produtos" id="destaques">
+        <h2>Produtos em Destaque</h2>
+        <div class="lista-produtos">
+            <div class="produto-item">
+                <img src="img/Bola.png" alt="Bola de Futebol">
+                <h3>Bola de Futebol</h3>
+                <p>R$ 99,99</p>
+                <button onclick="adicionarAoCarrinho('Bola de Futebol', 99.99)">Comprar</button>
+            </div>
+            <div class="produto-item">
+                <img src="img/tenis.png" alt="Tênis Esportivo">
+                <h3>Tênis Esportivo</h3>
+                <p>R$ 299,99</p>
+                <button onclick="adicionarAoCarrinho('Tênis Esportivo', 299.99)">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="rodape" id="contato">
+        <div class="informacoes">
+            <a href="#">Sobre a Loja</a>
+            <a href="#">Rastreio de Pedido</a>
+            <a href="#">Política de Troca</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Fale Conosco</a>
+        </div>
+        <p>&copy; 2019 Rixto Sports. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
