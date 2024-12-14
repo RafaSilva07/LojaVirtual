@@ -1,4 +1,4 @@
-### README - Loja Virtual "Rixto Sports"
+### Loja Virtual "Rixto Sports"
 
 ---
 
